@@ -15,7 +15,5 @@ public class Vehicle {
         this.name = name;
     }
 
-    public void printHello() {
-        System.out.println("hello inside vehicle");
-    }
+
 }
