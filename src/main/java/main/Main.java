@@ -4,12 +4,17 @@ import beans.Vehicle;
 import configs.ProjectConfig;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
+        var xmlContext = new ClassPathXmlApplicationContext("beans.xml");
+        Vehicle v = xmlContext.getBean(Vehicle.class);
+        System.out.println("vehicle name from xml config vehicle bean : " + v.getName());
+
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         // supplier when return a single line statement, {} are not needed
