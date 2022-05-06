@@ -13,6 +13,8 @@ public class Main {
         System.out.println(person.getName());
         System.out.println(person.getVehicle());
         System.out.println(vehicle.getName());
+        person.getVehicle().getVehicleService().rotate();
+        person.getVehicle().getVehicleService().playMusic();
 
 
 

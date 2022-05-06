@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Person {
 
     @Autowired
-    public Person(@Qualifier("vehicle2") Vehicle vehicle) {
+    public Person(@Qualifier("vehicle") Vehicle vehicle) {
         System.out.println("Person bean has been created by spring");
         this.vehicle = vehicle;
     }
